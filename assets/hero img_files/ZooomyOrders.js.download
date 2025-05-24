@@ -1,0 +1,144 @@
+function getQueryStringValue (key) {  
+  return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+}  
+
+if(getQueryStringValue("utm_campaign") == "zemailwishlist")
+{
+    var zemail = getQueryStringValue("zsource"); 
+      let  ptitle = meta.product.variants[0].name.replace(" - " + meta.product.variants[0].public_title, "");
+
+    zooomywishlist(meta.product.id);
+
+function zooomywishlist(pid) {
+
+
+    if(localStorage.getItem("ZwishlistproIds")==undefined)
+    {
+        var productids=pid;
+    }else{
+        var zooomywishlists=localStorage.getItem("ZwishlistproIds");
+        if(zooomywishlists.indexOf(pid)>-1){
+            var productids=pid;
+        }else{
+            var productids=zooomywishlists+","+pid;
+        }
+    }
+    localStorage.setItem("ZwishlistproIds",productids);
+    return true;
+    console.log(productids);
+
+
+
+
+
+} 
+
+$.ajax({
+            url: "https://zooomyapps.com/wishlist/ZooomyClicks.php",
+            data: { shop: Shopify.shop, product_id: meta.product.id, ptitle: ptitle, zemail: zemail },
+            dataType: "jsonp",
+            jsonp: "jsonZWCode",
+            async: "true",
+            success: function (e) {},
+        });
+
+
+
+    if(localStorage.getItem("ZwishlistEmail")==undefined){
+        var zwemail=zemail;
+    }
+    else
+    {
+        var zooomywishlists=localStorage.getItem("ZwishlistEmail");
+
+    }
+    localStorage.setItem("ZwishlistEmail",zwemail);
+
+
+ZwishlistproIds=localStorage.getItem("ZwishlistproIds");
+
+
+
+
+}
+
+
+
+
+
+if (void 0 !== Shopify.Checkout && "thank_you" == Shopify.Checkout.page && (console.log(localStorage.getItem("ZwishlistproIds")), null != localStorage.getItem("ZwishlistproIds"))) 
+{
+    console.log(Shopify.checkout.line_items);
+    var line_items = Shopify.checkout.line_items,
+         ZwishlistproIds = localStorage.getItem("ZwishlistproIds"),
+         checkorder = !1;
+         zwemail = localStorage.getItem("ZwishlistEmail");
+    for (i in line_items) -1 < ZwishlistproIds.indexOf(line_items[i].product_id) && (checkorder = !0);
+    if ((console.log(checkorder), checkorder)) {
+        console.log(localStorage.getItem("ZwishlistproIds"));
+        var url = "https://zooomyapps.com/wishlist/",
+            shop = Shopify.shop,
+            orderid = Shopify.checkout.order_id,
+            sendurl = "https://zooomyapps.com/wishlist/ZooomyWishlistOrder.php?shop=" + shop + "&orderid=" + orderid+  "&productid=" + ZwishlistpageproIds+  "&email=" + zwemail,
+            orscript = document.createElement("script");
+        (orscript.src = sendurl), document.getElementsByTagName("head")[0].appendChild(orscript);
+    }
+        localStorage.removeItem("ZwishlistproIds");
+        localStorage.removeItem("ZwishlistproIds");
+        localStorage.removeItem("ZwishlistEmail");
+         localStorage.removeItem("ZwishlistpageproIds");
+          localStorage.removeItem("ZwishlistPageEmail");
+        localStorage.removeItem("ZwishlistPageId");
+
+}
+(zooomywishlist = function (o) {
+    if (null == localStorage.getItem("ZwishlistproIds")) var e = o;
+    else {
+        var r = localStorage.getItem("ZwishlistproIds");
+        e = -1 < r.indexOf(o) ? o : r + "," + o;
+    }
+    return localStorage.setItem("ZwishlistproIds", e), !0;
+}),
+localStorage.getItem("ZwishlistproIds");
+
+
+
+if (void 0 !== Shopify.Checkout && "thank_you" == Shopify.Checkout.page && (console.log(localStorage.getItem("ZwishlistpageproIds")), null != localStorage.getItem("ZwishlistpageproIds"))) 
+{
+    console.log(Shopify.checkout.line_items);
+    var line_items = Shopify.checkout.line_items,
+         ZwishlistpageproIds = localStorage.getItem("ZwishlistpageproIds"),
+         checkorder = !1;
+         zwemail = localStorage.getItem("ZwishlistPageEmail");
+         zid = localStorage.getItem("ZwishlistPageId");
+
+    for (i in line_items) -1 < ZwishlistpageproIds.indexOf(line_items[i].product_id) && (checkorder = !0);
+    if ((console.log(checkorder), checkorder)) {
+        console.log(localStorage.getItem("ZwishlistpageproIds"));
+        var url = "https://zooomyapps.com/wishlist/",
+            shop = Shopify.shop,
+            orderid = Shopify.checkout.order_id,
+            sendurl = "https://zooomyapps.com/wishlist/ZooomyWishlistOrder.php?shop=" + shop + "&orderid=" + orderid+  "&productid=" + ZwishlistpageproIds+ "&email=" + zwemail+ "&cid=" + zid,
+            orscript = document.createElement("script");
+        (orscript.src = sendurl), document.getElementsByTagName("head")[0].appendChild(orscript);
+    }
+    localStorage.removeItem("ZwishlistproIds");
+        localStorage.removeItem("ZwishlistPageId");        
+      localStorage.removeItem("ZwishlistPageEmail"); 
+        localStorage.removeItem("ZwishlistPageId");
+        localStorage.removeItem("ZwishlistproIds");
+        localStorage.removeItem("ZwishlistEmail");
+
+
+}
+(zooomywishlist = function (o) {
+    if (null == localStorage.getItem("ZwishlistpageproIds")) var e = o;
+    else {
+        var r = localStorage.getItem("ZwishlistpageproIds");
+        e = -1 < r.indexOf(o) ? o : r + "," + o;
+    }
+    return localStorage.setItem("ZwishlistpageproIds", e), !0;
+}),
+    localStorage.getItem("ZwishlistpageproIds");
+    localStorage.getItem("ZwishlistPageEmail");
+    localStorage.getItem("ZwishlistPageId");
