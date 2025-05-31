@@ -14,8 +14,24 @@
     color: #121212;
     letter-spacing: 0.1em;
    border: 1px solid rgb(231, 230, 230);
-   font-size: 14px;
+   font-size: 12px;
+   
 }
+.psmall{
+    display: flex;
+     justify-content: center;
+    align-items: center;
+padding: 15px 0px;
+height: 20px;
+font-weight: 600;
+visibility: hidden;
+font-family: 'Times New Roman', Times, serif;
+text-decoration: underline;
+font-size: 18px;
+
+}
+
+
 
 .nav2{
     display: flex;
@@ -46,47 +62,72 @@
     align-items: center;
     gap: 20px;
     border-bottom: 1px solid  rgb(231, 230, 230) ;
+    margin-top: 15px;
 }
-ul>li{
+#ul>li{
   
   display: inline-block;
   margin: 20px 15px 30px 15px;
   color: rgb(73, 73, 73);
+  letter-spacing: 0.1em;
+  font-size: 12px
 }
 
 .hero1{
-   
-height: 700;
-padding: 120px 0px 50px 0px;
+   width: 100%;
+height: 700px;
+padding: 120px 0px 100px 0px ;
 border-bottom: 1px solid rgb(231, 230, 230);
+
 }
+
 
 ul>li:hover{
     color: black;
     text-decoration: underline;
 }
-
+/* cards section */
 .heading1{
-    padding: 50px;
-    font-size: 50px;
+    padding: 40px 120px;
+    font-size: 40px;
 }
 .cards1{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 0px 50px 0px 50px;
+    padding: 0px 100px 0px 120px;
     gap: 10px;
+    height: 390px;
 }
+
 
 .cards2{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 50px;
+    padding: 50px 120px;
     gap: 10px;
+    height: 390px;
 }
 
+.card1,.card2,.card3,.card4,.card5,.card6{
+    height: 380px;
+    width: 100%;
+}
+.card2 img{
+    object-fit: cover;
+}
+
+
+
+
+
+
 .anchor{
+    display: flex;
+    justify-content: space-between;
     text-decoration: none;
     color: black;
+    padding-top: 20px;
+    font-size: 20px;
 }
 
 .button{
@@ -95,12 +136,13 @@ ul>li:hover{
         
 }
 .buttun{
-    width: 150px;
+    width: 120px;
     height: 45px;
     background-color: black;
     border: 0px;
     color: white;
-    font-size: 16px;
+    font-size: 14px;
+    margin: 20px 0px;
 }
 
 .hero2{
@@ -110,6 +152,7 @@ ul>li:hover{
   position: relative ;
     
 }
+
 
 .button2{
     position: absolute;
@@ -129,7 +172,8 @@ ul>li:hover{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-auto-rows: 330px;
-    padding: 30px 50px 10px 50px;
+    padding: 30px 120px 10px 120px;
+    margin-bottom: 70px;
     
 }
 
@@ -144,6 +188,18 @@ ul>li:hover{
  
     text-align: center;
 
+}
+.card7:hover{
+    text-decoration: underline;
+}
+.card8:hover{
+    text-decoration: underline;
+}.card9:hover{
+    text-decoration: underline;
+}.card10:hover{
+    text-decoration: underline;
+}.card11:hover{
+    text-decoration: underline;
 }
 
 
@@ -170,4 +226,298 @@ ul>li:hover{
     position: absolute;
     bottom: 0PX;
 }
+
+
+/* card4 */
+.button3{
+    display: flex;
+    justify-content: center;
+       
+}
+.b3{
+    width: 120px;
+    height: 45px;
+    background-color: black;
+    border: 0px;
+    color: white;
+    font-size: 14px;
+    margin: 60px;
+}
+
+
+.cards4{
+
+display: grid;
+grid-template-columns: 1fr 1fr 1fr 1fr;
+padding: 30px 120px 30px 120px;
+gap: 40px;
+height: 350px;
+
+}
+.f{
+    height: 250px;
+    width: 100%;
+
+}
+
+
+
+.cards4 img{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.anchor2{
+  color: black;
+  text-decoration: none;
+}
+.last{
+    height: 40px;
+      padding-top: 30px;
+}
+
+.carda:hover{
+    text-decoration: underline;
+}
+.cardb:hover{
+    text-decoration: underline;
+}
+.cardc:hover{
+    text-decoration: underline;
+}
+.cardd:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+                
+/* footer */
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: #121212;
+    color: rgb(180, 175, 175);
+    font-size: 15px;
+    height: 320px;
+    padding-top: 30px;
+    margin-top: 80px;
+    padding-right: 120px;
+    border-bottom: 1px solid rgb(75, 74, 74) ;
+    
+}
+.footer h2{
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    font-size: 17px;
+}
+.one{
+    display: flex;
+    flex-direction: column ;
+    flex-basis: 25%;
+}
+.two{
+    flex-basis: 25%;
+}
+.three{
+    flex-basis: 25%;
+
+}
+.footer p{
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 20px;
+    text-align: justify;
+}
+.f-li{
+    line-height: 25px;
+    padding-top: 10px;
+}
+
+
+
+.footer2{
+    height: 70px;
+    background-color: #121212;
+    color: white;
+    display: flex;
+    align-items: end;
+    padding-left: 80px ;
+    padding-bottom: 15px;
+    font-size: 12px;
+    color: rgb(180, 175, 175);
+    text-transform: capitalize;
+}
+
+
+
+
+/* Media querry */
+
+@media screen and (max-width: 768px) {
+    .nav3 li{
+        display: none;
+    }
+    .nav1{
+        display: none;
+    }
+    .psmall{
+        visibility: visible;
+    }
+   
+    
+    
+}
+
+@media (max-width:350px) {
+
+    .c{
+        grid-template-columns: 1fr;
+        height: 950px;
+        gap: 60px;
+    }
+    .card1,.card2,.card3,.card4,.card5,.card6{
+        height: 250px;
+    }
+    .heading1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: italic;
+        font-size: 20px;
+        padding: 10px 0px 10px 50px;
+        text-decoration: underline;
+    }
+    .anchor{
+        text-decoration: underline;
+        font-style: italic;
+        font-size: 14px;
+    }
+     .hero1{
+        height: 200px;
+        padding: 10px 0px;
+        width: 260px;
+    }
+    .hero1 img{
+        object-fit: contain;
+        width: 100%;
+        height:100%;
+    }
+    .buttun{
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .hero2{
+        height: 200px;
+        width: 270px;
+        padding:  0px 0px;
+     margin: 0px 0px;
+    }
+    .hero2 img{
+        object-fit: contain;
+    }
+
+    .d{
+        grid-template-columns: 1fr ;
+        height: 1500px;
+        gap: 100px;
+    }
+    .button2{
+        bottom:50px;
+        width: 60px;
+        font-size: 10px;
+        height: 30px;
+        left: 50px;
+    }
+.icon1,.icon3{
+    display: none;
+}
+    
+}
+
+@media (min-width:350px) and (max-width: 550px) {
+    
+    .c{
+        grid-template-columns: 1fr;
+        height: 1100px;
+        gap: 20px;
+        padding: 10px 20px;
+    }
+    .card1,.card2,.card3,.card4,.card5,.card6{
+        height: 320px;
+    }
+    .cards2 img{
+        object-fit: contain;
+    }
+    .cards1 img{
+        object-fit: contain;
+    }
+    .heading1{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: italic;
+        font-size: 22px;
+        padding: 10px 0px 10px 50px;
+        text-decoration: underline;
+    }
+    .anchor{
+        text-decoration: underline;
+        font-style: italic;
+        font-size: 16px;
+       
+    }
+     .hero1{
+        height: 200px;
+        padding: 10px 0px;
+        width: 300px;
+    }
+    .hero1 img{
+        object-fit: contain;
+        width: 100%;
+        height:100%;
+    }
+    .buttun{
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .hero2{
+        height: 200px;
+        width: 270px;
+        padding:  0px 0px;
+     margin: 0px 0px;
+    }
+    .hero2 img{
+        object-fit: contain;
+    }
+
+    .d{
+        grid-template-columns: 1fr  ;
+        height: 2000px;
+        gap: 100px;
+    }
+    .button2{
+        bottom:50px;
+        width: 60px;
+        font-size: 10px;
+        height: 30px;
+        left: 50px;
+    }
+    .card7,.card8,.card9,.card10,.card11{
+        height: 300px;
+        
+    }
+    .img{
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .icon1,.icon3{
+    display: none;
+}
+    
+}
+
 
